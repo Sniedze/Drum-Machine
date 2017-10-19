@@ -10,11 +10,13 @@ let dd=document.querySelector(".dd");
 let ww=document.querySelector(".ww");
 let xx=document.querySelector(".xx");
 let zz=document.querySelector(".zz");
-let key=document.querySelector(".key")
+let key=document.querySelectorAll(".key");
+let counter = 0;
 
 window.addEventListener("keydown", clicked)
     function clicked(evt){
-        key.classList.add("playing");
+        key[counter].classList.add("playing");
+        counter--;
         switch(evt.key){
 
             case "a":
