@@ -15,7 +15,7 @@ let counter = 0;
 
 window.addEventListener("keydown", clicked)
     function clicked(evt){
-        key[counter].classList.add("playing");
+        document.getElementsByClassName("key").addClasslass="playing";
         counter--;
         switch(evt.key){
 
