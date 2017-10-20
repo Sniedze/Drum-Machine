@@ -14,10 +14,46 @@ let key=document.querySelectorAll(".key");
 let counter = 0;
 
 window.addEventListener("keydown", clicked)
+a.addEventListener("click", function(){
+    let evtClone ={
+        key: "a"
+    }
+    clicked(evtClone);
+})
+s.addEventListener("click", function(){
+    let evtClone ={
+        key: "s"
+    }
+    clicked(evtClone);
+})
+d.addEventListener("click", function(){
+    let evtClone ={
+        key: "d"
+    }
+    clicked(evtClone);
+})
+w.addEventListener("click", function(){
+    let evtClone ={
+        key: "w"
+    }
+    clicked(evtClone);
+})
+x.addEventListener("click", function(){
+    let evtClone ={
+        key: "x"
+    }
+    clicked(evtClone);
+})
+z.addEventListener("click", function(){
+    let evtClone ={
+        key: "z"
+    }
+    clicked(evtClone);
+})
     function clicked(evt){
 
 
-        counter--;
+
         switch(evt.key){
 
             case "a":
