@@ -1,9 +1,9 @@
-let a=document.querySelector(".a");
-let s=document.querySelector(".s");
-let d=document.querySelector(".d");
-let w=document.querySelector(".w");
-let x=document.querySelector(".x");
-let z=document.querySelector(".z");
+let a=document.querySelector("#a");
+let s=document.querySelector("#s");
+let d=document.querySelector("#d");
+let w=document.querySelector("#w");
+let x=document.querySelector("#x");
+let z=document.querySelector("#z");
 let aa=document.querySelector(".aa");
 let ss=document.querySelector(".ss");
 let dd=document.querySelector(".dd");
@@ -15,14 +15,24 @@ let counter = 0;
 
 window.addEventListener("keydown", clicked)
     function clicked(evt){
-        document.getElementsByClassName("key").addClasslass="playing";
+
+        function audEnded(whatLetter){
+	whatLetter.classList.remove('playing');
+}
+
         counter--;
         switch(evt.key){
 
             case "a":
+                a.classList.remove("playing");
                 aa.currentTime=0;//rewind to the start
                 aa.play();
                 console.log("A Clicked");
+                a.classList.add("playing");
+			     a.addEventListener('ended', function(){
+				 audEnded(a)
+                });
+
                 break;
             case "s":
                 ss.currentTime=0;
@@ -52,7 +62,28 @@ window.addEventListener("keydown", clicked)
                       }
     }
 
-/*s.addEventListener("keydown", pressS);
+/*
+function audEnded(whatLetter){
+	whatLetter.classList.remove('style');
+}
+
+window.addEventListener("keydown", fingerDown);
+function fingerDown (evt){
+console.log("it plays ");
+	switch(evt.key){
+		case "a":
+			//a.classList.remove('style');
+			a.classList.add('style');
+			aud1.play();
+			aud1.currentTime=0;
+			 a.addEventListener('animationend', function(){
+				 audEnded(a)
+			 });
+
+			break;
+
+
+s.addEventListener("keydown", pressS);
 function pressS(){
     console.log("S Pressed")
     ss.play();

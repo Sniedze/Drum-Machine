@@ -12,6 +12,7 @@
     background-color: #fff;
     text-shadow: 0 0 5px black;
 
+
 }
 
 .playing{
@@ -21,6 +22,7 @@
 }
 kbd{
     display: block;
+
 }
 .sound{
     color: #ffc600;
