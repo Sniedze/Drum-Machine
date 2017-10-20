@@ -16,9 +16,6 @@ let counter = 0;
 window.addEventListener("keydown", clicked)
     function clicked(evt){
 
-        function audEnded(whatLetter){
-	whatLetter.classList.remove('playing');
-}
 
         counter--;
         switch(evt.key){
@@ -29,35 +26,55 @@ window.addEventListener("keydown", clicked)
                 aa.play();
                 console.log("A Clicked");
                 a.classList.add("playing");
-			     a.addEventListener('ended', function(){
-				 audEnded(a)
-                });
+                a.addEventListener("transitionend", function(){
+                    a.classList.remove("playing");
+                })
 
                 break;
             case "s":
                 ss.currentTime=0;
                 ss.play();
                 console.log("S Clicked");
+                s.classList.add("playing");
+                s.addEventListener("transitionend", function(){
+                    s.classList.remove("playing");
+                })
                 break;
             case "d":
                 dd.currentTime=0;
                 dd.play();
                 console.log("D Clicked");
+                d.classList.add("playing");
+                d.addEventListener("transitionend", function(){
+                    d.classList.remove("playing");
+                })
                 break;
             case "w":
                 ww.currentTime=0;
                 ww.play();
                 console.log("W Clicked");
+                w.classList.add("playing");
+                w.addEventListener("transitionend", function(){
+                    w.classList.remove("playing");
+                })
                 break;
             case "x":
                 xx.currentTime=0;
                 xx.play();
                 console.log("X Clicked");
+                x.classList.add("playing");
+                x.addEventListener("transitionend", function(){
+                    x.classList.remove("playing");
+                })
                 break;
             case "z":
                 zz.currentTime=0;
                 zz.play();
                 console.log("Z Clicked");
+                z.classList.add("playing");
+                z.addEventListener("transitionend", function(){
+                    z.classList.remove("playing");
+                })
                 break;
                       }
     }
